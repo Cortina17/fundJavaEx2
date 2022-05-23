@@ -1,23 +1,11 @@
 package fundJavaEx2;
 
-public class Cuenta implements Transferible {
+public class Cuenta {
 
-	@Override
-	public void depositar(double cant) {
-		// TODO Auto-generated method stub
+	private int nCuenta;
+	private double balance;
 
+	public double getBalance() {
+		return balance;
 	}
-
-	@Override
-	public void extraer(double cant) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mover(double cant, int nroCuenta) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

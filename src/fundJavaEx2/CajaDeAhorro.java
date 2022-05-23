@@ -1,5 +1,5 @@
 package fundJavaEx2;
 
-public class CajaDeAhorro {
+public class CajaDeAhorro extends Cuenta{
 	
 }
