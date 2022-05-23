@@ -6,5 +6,5 @@ public interface Transferible {
 
 	public void extraer(double cant);
 
-	public void mover(double cant, int nroCuenta, Cuenta cuenta);
+	public boolean mover(double cant, int nroCuenta, Cuenta cuenta);
 }
