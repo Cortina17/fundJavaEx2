@@ -22,7 +22,7 @@ public class Cuenta implements Transferible {
 	@Override
 	public double depositar(double cantidad) {
 		this.saldo = this.saldo + cantidad;
-		return this.saldo + cantidad;
+		return this.saldo;
 	}
 
 	@Override
@@ -30,8 +30,10 @@ public class Cuenta implements Transferible {
 		if (cantidad < saldo) {
 			setSaldo(getSaldo() - cantidad);
 		} else {
+
 			throw new SobreGiroException("Fondos insuficientes, con un deficit de " + (getSaldo() - cantidad));
 		}
+
 	}
 
 	@Override

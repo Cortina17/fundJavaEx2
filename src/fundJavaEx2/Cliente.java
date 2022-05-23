@@ -1,5 +1,6 @@
 package fundJavaEx2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
@@ -8,11 +9,11 @@ public class Cliente {
 	private List<Cuenta> cuentas;
 
 	public Cliente() {
-		super();
+		super();// ESTOY LLAMANDO AL SUPER DE OBJECT
 	}
 
 	public Cliente(String nombre, String apellido, List<Cuenta> cuentas) {
-		super();
+		super();// ESTOY LLAMANDO AL SUPER DE OBJECT
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.cuentas = cuentas;
@@ -46,4 +47,5 @@ public class Cliente {
 	public String toString() {
 		return "El cliente " + nombre + " " + apellido + ", tiene las cuentas=" + cuentas.toString();
 	}
+
 }

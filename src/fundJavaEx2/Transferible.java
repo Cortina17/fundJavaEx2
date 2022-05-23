@@ -1,7 +1,6 @@
 package fundJavaEx2;
 
 public interface Transferible {
-	
 	public double depositar(double cantidad);
 
 	public void extraer(double cantidad) throws SobreGiroException;

@@ -6,7 +6,7 @@ import java.util.List;
 public class TestBanco {
 
 	public static void main(String[] args) {
-
+		// TODO Auto-generated method stub
 		Cuenta cuentaAhorro = new CajaDeAhorro("941", 100);
 
 		Cuenta cuentaCorriente = new CuentaCorriente("1033", 25, 14);
@@ -29,13 +29,13 @@ public class TestBanco {
 		System.out.println("Ultimo cheque emitido: " + cuentaCorriente1.getUltimoNumeroCheque());
 		System.out.println("Saldo cuenta corriente: " + cuentaCorriente.getSaldo());
 		System.out.println("****");
-
 		if (cuentaAhorro.mover(85, cuentaCorriente1.getNumeroCuenta(), cuentaCorriente1)) {
 			System.out.println(
 					"Saldo cuenta corriente despues de mover de la cuenta de ahorro: " + cuentaCorriente1.getSaldo());
 		} else {
 			System.out.println("No pude mover los fondos");
 		}
+
 	}
 
 }
