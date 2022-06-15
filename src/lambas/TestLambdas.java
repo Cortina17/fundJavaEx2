@@ -12,7 +12,25 @@ public class TestLambdas {
 	public static void main(String[] args) {
 		// ejemplo1();
 		// ejemplo2();
-		ejemplo3();
+		// ejemplo3();
+		ejemplo4();
+	}
+
+	public static void ejemplo4() {
+		// usar expresion lambda en un metodo
+		// el metodo debe tener un paramatro
+		// con una interfaz de metodo UNICO como tipo
+
+		StringFunction exclamacion = (s) -> s + "!";
+		StringFunction pregunta = (s) -> s + "?";
+		imprimir("Hola", exclamacion);
+		imprimir("Hola", pregunta);
+	}
+
+	public static void imprimir(String str, StringFunction formato) {
+		// llamamos al metodo de la interfaz y ejecutamos la expresion lambda
+		String rpta = formato.run(str);
+		System.out.println(rpta);
 	}
 
 	public static void ordenar(List<Pais> list) {
