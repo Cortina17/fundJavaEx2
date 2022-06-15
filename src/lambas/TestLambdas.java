@@ -2,11 +2,27 @@ package lambas;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.function.Consumer;
 
 public class TestLambdas {
 
 	public static void main(String[] args) {
-		ejemplo1();
+		// ejemplo1();
+		ejemplo2();
+	}
+
+	public static void ejemplo2() {
+		// uso de interfaz Consumer para almacenar una expresion lambda en una variable
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
+		numeros.add(13);
+		numeros.add(33);
+		numeros.add(63);
+		numeros.add(93);
+		numeros.add(123);
+		Consumer<Integer> metodo = (n) -> {
+			System.out.println(n);
+		};
+		numeros.forEach(metodo);
 	}
 
 	public static void ejemplo1() {
