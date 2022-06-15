@@ -25,7 +25,10 @@ public class TestLambdas {
 		});
 	}
 
-	public static void ordenarLambdas() {
+	public static void ordenarLambdas(List<Pais> list) {
+		Collections.sort(list, (p1, p2) -> {
+			return p1.nombre.compareTo(p2.nombre);
+		});
 	}
 
 	public static void ejemplo3() {
@@ -56,6 +59,16 @@ public class TestLambdas {
 		});
 		System.out.println("ordenados");
 
+		Pais pais6 = new Pais("Bulgary");
+		Pais pais7 = new Pais("Libia");
+		paises.add(pais6);
+		paises.add(pais7);
+		ordenarLambdas(paises);
+		paises.forEach((p) -> {
+			System.out.print(p.nombre + ", ");
+		});
+
+		System.out.println("ordenados con lambdas");
 	}
 
 	public static void ejemplo2() {
